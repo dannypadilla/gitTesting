@@ -1,1 +1,4 @@
 # New file 1
+.Second line for change
+.Third line after the file has been staged (add)
+.Fourth line edit
