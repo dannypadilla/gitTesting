@@ -2,3 +2,7 @@
 .Second line for change
 .Third line after the file has been staged (add)
 .Fourth line edit
+.Fifth line: commited then added this line to show 'git diff HEAD' 
+More edits just to keep typing
+
+And more lines
