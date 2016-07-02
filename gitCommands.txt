@@ -1,0 +1,20 @@
+.
+git init
+.
+git status
+.
+git add <fileName>
+.
+git show HEAD
+.
+git diff
+git diff HEAD
+git diff --staged
+.
+git commit -m "description in present tense"
+.
+git push
+.
+git checkout -- <fileName>
+.
+git log
