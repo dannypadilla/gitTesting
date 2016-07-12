@@ -1,0 +1,21 @@
+### Working with remotes ###
+
+# Note: cloned repos have origin by default
+
+# Showing remotes
+.show configured remote servers (cd to path first)
+git remote
+
+.shows URLs Git has stored for the shortname to be used when read/write
+git remote -v
+
+# Adding Remote repos
+.add remote explicitly
+git remote add <shortname> <url>
+
+.fetch all information from repo (updates repo)
+git fetch <shortname>
+
+# Fetch and pulling from Remotes
+.get data from remote projects
+git fetch [remote-name]
