@@ -98,3 +98,24 @@ git mv file_from file_to
 mv FILENAME.f FILENAME
 git rm FILENAME.f
 git add FILENAME
+
+# Viewing the Commit History
+.list commits made in repo: most recent show first
+git log
+
+.shows difference introduced in each commit
+git log -p
+
+.limits the output to only the last two entries
+git log -2
+git log -p -2
+
+.abbreviated stats for each commit
+git log --stat
+
+.changes the log output to format other than the default
+git log --pretty
+.prints each commit on a single line
+git log --pretty=oneline
+.specify your own log output format (table 2-1 options)
+git log --pretty=format: "%h - %an, %ar : %s"
