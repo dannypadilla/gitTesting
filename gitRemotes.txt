@@ -1,6 +1,9 @@
 ### Working with remotes ###
 
-# Note: cloned repos have origin by default
+NOTE:
+# cloned repos have origin by default
+git clone [url]
+git fetch origin
 
 # Showing remotes
 .show configured remote servers (cd to path first)
@@ -13,9 +16,47 @@ git remote -v
 .add remote explicitly
 git remote add <shortname> <url>
 
+NOTE:
+# fetch command only downloads the data to local repo - it doesn't
+# automatically merge it with any of your work or modify what you're
+# currently working on
+
 .fetch all information from repo (updates repo)
 git fetch <shortname>
 
 # Fetch and pulling from Remotes
-.get data from remote projects
+.get data from remote projects (updates repo: same as above)
 git fetch [remote-name]
+
+NOTE:
+# if your current  branch is setup to track a remote branch
+# use 'git pull' to automatically fetch and then merge the remote
+# branch into your current branch
+
+NOTE:
+# 'git clone' automatically sets up your local master branch to
+# track the remote master branch on the server you cloned from
+
+.fetches data from the server you originally cloned from and automatically
+.tries to merge it into the code you're currently workin on
+git pull
+
+#Pushing to your Remotes
+.push your project 'upstream'
+git push [remote-name] [branch-name]
+
+# Inspecting a remote
+.see more information about a particular remote
+git remote show [remote-name]
+git remote show origin
+
+# Removing and Renaming Remotes
+.change a remote's shortname
+git remote rename <OLDshortname> <NEWshortname>
+
+NOTE:
+# 'git remote rename' also changes all your remote-tracking
+# branch names too
+
+.remove remote
+git remote rm <shortname>
