@@ -119,3 +119,19 @@ git log --pretty
 git log --pretty=oneline
 .specify your own log output format (table 2-1 options)
 git log --pretty=format: "%h - %an, %ar : %s"
+
+# Undoing
+.amends prevous commit (ie. forgot to add file, rename commit message)
+git commit --amend
+
+git commit -m "initial commit"
+git add forgotten_file
+git commit --amend
+
+.unstage a staged file
+git reset HEAD <file>
+
+.unmodifying a modified file (discard changes before staged: copies over file)
+git checkout -- <file>
+
+
