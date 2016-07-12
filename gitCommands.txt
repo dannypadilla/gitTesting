@@ -1,20 +1,100 @@
-.
+# First-Time Git Setup
+.get and set configuration variables
+git config
+git config --system
+
+.set username
+git config --global user.name "firstName lastName"
+
+.set email address
+git config --global user.email email@emai.com
+
+.configure default text editor for Git
+git config --global core.editor EDITORNAMEHERE
+
+.check settings
+git config --list
+
+.check specific key value
+git config <key>
+git config user.name
+
+# Get help
+git help <verb>
+git <verb> --help
+man git-<verb>
+
+# Getting a Git repo
+.initialize a repo in an existing directory
 git init
-.
+
+# Cloning an existing repo
+.copies an existing Git repo
+git clone [url]
+git clone [url] FOLDER
+
+#Record changes to the repo
+.check the status of your file
 git status
-.
+git status -s
+
+.track/stage new/modified files
 git add <fileName>
+git add .
+git add FILEPATH
+git add *.FILETYPE
+
 .
 git show HEAD
-.
+
+#Viewing staged/unstaged changes
+.unstaged changes (working directory vs staging area)
 git diff
 git diff HEAD
+
+.compares staged changes to last commit
 git diff --staged
-.
+git diff --cached
+
+# Commiting changes
+.commits and launches default text editor
+git commit
+
+.adds diff of changes to editor
+git commit -v
+
+.commits with a message
 git commit -m "description in present tense"
+
+.straight to commit(skip stage; stage every file already tracked before commit)
+git commit -a -m
+
+
 .
 git push
+
 .
 git checkout -- <fileName>
+
 .
 git log
+
+# Removing Files
+.removes and stages removal of file (deletes from working directory too)
+git rm FILENAME
+
+.keep file in working tree but REMOVE from STAGING area (no longer track file)
+git rm --cached FILENAME
+
+.remove a filetype with file-glob patterns
+git rm  FOLDER/\*.FILETYPE
+git rm \*~
+
+# Moving Files
+.rename
+git mv file_from file_to
+
+.equivalent to above (enter line-by-line)
+mv FILENAME.f FILENAME
+git rm FILENAME.f
+git add FILENAME
