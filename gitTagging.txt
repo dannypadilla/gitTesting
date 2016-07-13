@@ -1,0 +1,78 @@
+----- 2.6 Git Basics - Tagging ------
+
+# Listing Tags
+.list your tags (commands list in alphabetical order)
+git tag
+
+.search for tags with a particular pattern
+git tag -l "<PATTERN>"
+git tag -l "v1.8.5"
+
+# Creating Tags
+
+NOTE:
+# Git uses two main types of tags:
+# 1. lightweight:
+#       like a branch that doesn't change - it's just a pointer
+#       to a specific commit; temporary tag
+#  2. annotated:
+#       stored as full objects in Git database. They're checksummed;
+#       contain the tagger name, email, and date; have a tagging
+#       message; and can be signed and verified with the GNU
+#       Privacy Guard (GPG)
+
+# Annotated Tags
+.create an annotated tag
+git tag -a <tagName> -m "<description>"
+git tag -a v1.4 -m "my version 1.4"
+
+.see tag data along with the commit that was tagged
+git show
+git show <tagName>
+git show v1.4
+
+# Lightweight Tags
+.tag commit with lightweight tag (commit checksum stored in a file)
+git tag <tagName>-lw
+git tag v1.4-lw
+
+# Tagging later
+
+.view commit history
+git log --pretty=oneline
+
+.tag commit after moving past them
+git tag -a <tagName> <commitCheckSumValue>
+git tag -a v1.2 9fceb02
+
+# Sharing Tags
+
+NOTE:
+# Be default, 'git push' doesn't transfer tags to remote server. Must
+# be explicitly pushed to a shared server after creating them
+
+.push tags to a shared server after creating them
+git push origin [tagName]
+
+.push all tags at once
+git push origin --tags
+
+#Checking out Tags
+
+NOTE:
+# You can't really check out a tag in Git, since they can't be moved
+# around. If you want to put a version of your repository in your
+# working directory that looks like a specific tag, you can create a
+# new branch at a specific tag
+
+.get a repo based on tag
+git checkout -b [branchName] [tagName]
+git checkout -b version2 v2.0.0
+
+NOTE:
+# If you fo this an do a commit, your branch will be slightly
+# different than your tag since it will move forward with your
+# new changes
+
+
+
