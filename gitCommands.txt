@@ -19,6 +19,14 @@ git config --list
 git config <key>
 git config user.name
 
+### Setup workspace to connect with Git repo ###
+
+echo “# REPO NAME” >> README.md
+git init
+git add .
+git remote add origin <URL>
+git push -u origin master
+
 # Get help
 git help <verb>
 git <verb> --help
